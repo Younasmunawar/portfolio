@@ -4,7 +4,7 @@ import React, { useEffect } from "react";
 import Head from "next/head";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import SocialMedia from "../Components/SocialMedia";
+import SocialMedia from "../components/SocialMedia";
 
 const ContactForm = () => {
 	useEffect(() => {
