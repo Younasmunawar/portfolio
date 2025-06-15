@@ -1,6 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: 'https://ymcoding.com', // ✅ Your live domain
+  siteUrl: 'https://ymcoding.vercel.app', // ✅ Your live domain
   generateRobotsTxt: true,
   sitemapSize: 5000,
   changefreq: 'monthly',
