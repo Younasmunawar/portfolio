@@ -34,7 +34,7 @@ export default function Index() {
   <meta name="robots" content="index, follow" />
   <meta charSet="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+<meta name="google-site-verification" content="o9o3e4iGax5noeCj6bJjFH3Ky8yNjbVM0ZfPOkLkVJU" />
   {/* Open Graph (Facebook, LinkedIn) */}
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://ymcoding.com/" /> {/* Replace with actual domain */}
