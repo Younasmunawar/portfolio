@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://ymcoding.com
+
+# Sitemaps
+Sitemap: https://ymcoding.com/sitemap.xml
