@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import Head from "next/head";
-import ButtonCV from "../Components/ButtonCV";
+import ButtonCV from "../components/ButtonCV";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { db } from "../lib/firebase";
