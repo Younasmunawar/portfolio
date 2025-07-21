@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://ymcoding.vercel.app
+Host: https://ymcoding.bio/
 
 # Sitemaps
-Sitemap: https://ymcoding.vercel.app/sitemap.xml
+Sitemap: https://www.ymcoding.bio/sitemap.xml
