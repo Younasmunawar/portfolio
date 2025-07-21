@@ -82,14 +82,14 @@ export default function FullWidthTabs() {
         // Define your local certificate image files
         const imageFiles = [
           "Building a Website Certification.webp",
-          "C++ Certification.webp",
+          "C plus plus Certification.webp",
           "CSS Certification.webp",
           "Deep learning and Deployment on web Amazon.png",
           "Deep learning and Deployment on web DevTown.png",
           "Deep learning and Deployment on web.png",
-          "Intro to C++ and Data Structure and Algorithms DevTown.png",
-          "Intro to C++ and Data Structure and Algorithms Google.png",
-          "Intro to C++ and Data Structure and Algorithms.png",
+          "Intro to C plus plus and Data Structure and Algorithms DevTown.png",
+          "Intro to C plus plus and Data Structure and Algorithms Google.png",
+          "Intro to C plus plus and Data Structure and Algorithms.png",
           "Java Certification.webp",
           "Learn Python Programming - Beginner to Intermediate Level.webp",
         ];
