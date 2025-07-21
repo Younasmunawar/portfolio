@@ -47,7 +47,7 @@ const AboutMe = () => {
 
         {/* Open Graph (Facebook, LinkedIn) */}
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ymcoding.com/about" />
+        <meta property="og:url" content="https://www.ymcoding.bio/about" />
         <meta
           property="og:title"
           content="About Younas Munawar | Full Stack Web Developer & SEO Expert"

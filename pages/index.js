@@ -37,7 +37,7 @@ export default function Index() {
 <meta name="google-site-verification" content="o9o3e4iGax5noeCj6bJjFH3Ky8yNjbVM0ZfPOkLkVJU" />
   {/* Open Graph (Facebook, LinkedIn) */}
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://ymcoding.com/" /> {/* Replace with actual domain */}
+  <meta property="og:url" content="https://www.ymcoding.bio/" /> {/* Replace with actual domain */}
   <meta
     property="og:title"
     content="Younas Munawar | Full Stack Web Developer & SEO Expert"

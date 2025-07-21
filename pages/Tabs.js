@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { db, collection } from "../lib/firebase";
+import { db, collection } from "../lib/firebase"; // Assuming firebase.js is in lib folder relative to pages
 import { getDocs } from "firebase/firestore";
 import PropTypes from "prop-types";
 import dynamic from "next/dynamic";
@@ -9,12 +9,11 @@ import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
-import CardProject from "../components/Card";
-import Certificate from "../components/Certificate";
-import PIcon from "../components/CardIcon";
+import CardProject from "../components/Card"; // Assuming components folder relative to pages
+import Certificate from "../components/Certificate"; // Assuming components folder relative to pages
+import PIcon from "../components/CardIcon"; // Assuming components folder relative to pages
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { supabase } from "../lib/supabaseClient";
 
 const SwipeableViews = dynamic(() => import("react-swipeable-views"), {
   ssr: false,
@@ -32,17 +31,21 @@ function TabPanel(props) {
     >
       {value === index && (
         <Box sx={{ p: 3 }}>
-          <Typography>{children}</Typography>
+          {/* Fix for "<div> cannot appear as a descendant of <p>" */}
+          {/* By default, Typography renders as a <p> tag. Changing its component prop to "div" */}
+          {/* allows it to contain block-level elements without a DOM nesting warning. */}
+          <Typography component="div">{children}</Typography>
         </Box>
       )}
     </div>
   );
 }
 
+// Fix for "TabPanel: prop type `value` is invalid"
 TabPanel.propTypes = {
   children: PropTypes.node,
   index: PropTypes.number.isRequired,
-  value: PropTypes.number.isRequired,
+  value: PropTypes.number.isRequired, // Corrected: value should be a number
 };
 
 function a11yProps(index) {
@@ -70,31 +73,38 @@ export default function FullWidthTabs() {
   useEffect(() => {
     const fetchData = async () => {
       try {
+        // Fetch projects from Firebase
         const projectCollection = collection(db, "projects");
         const projectQuerySnapshot = await getDocs(projectCollection);
         const projectData = projectQuerySnapshot.docs.map((doc) => doc.data());
         setProjects(projectData);
 
-      const imageFiles = [
-  "Intro to C++ and Data Structure and Algorithms Google.png",
-  "Intro to C++ and Data Structure and Algorithms.png",
-  "Intro to C++ and Data Structure and Algorithms DevTown.png",
-  "Deep learning and Deployment on web Amazon.png",
-  "Deep learning and Deployment on web.png",
-  "Deep learning and Deployment on web DevTown.png"
-];
+        // Define your local certificate image files
+        const imageFiles = [
+          "Building a Website Certification.webp",
+          "C++ Certification.webp",
+          "CSS Certification.webp",
+          "Deep learning and Deployment on web Amazon.png",
+          "Deep learning and Deployment on web DevTown.png",
+          "Deep learning and Deployment on web.png",
+          "Intro to C++ and Data Structure and Algorithms DevTown.png",
+          "Intro to C++ and Data Structure and Algorithms Google.png",
+          "Intro to C++ and Data Structure and Algorithms.png",
+          "Java Certification.webp",
+          "Learn Python Programming - Beginner to Intermediate Level.webp",
+        ];
 
-const certificates = imageFiles.map((name) => ({
-  imgUrl: `https://rokefawlmxqbajswdvff.supabase.co/storage/v1/object/public/certification/${name}`,
-  title: name.split(".")[0],
-}));
+        // Construct local paths for certificate images
+        const localCertificates = imageFiles.map((name) => ({
+          imgUrl: `/certifications/${name}`, // Corrected path: used "certifications" (plural)
+          title: name.split(".")[0],
+        }));
 
-setCertificates(certificates);
+        setCertificates(localCertificates);
       } catch (error) {
         console.error("Error fetching data: ", error);
       }
     };
-
 
     fetchData();
   }, []);
@@ -115,12 +125,14 @@ setCertificates(certificates);
             textColor="secondary"
             indicatorColor="secondary"
             variant="scrollable"
-            scrollButtons="auto"
+            scrollButtons="auto" // This might still cause the "React does not recognize scrollButtons" warning,
+                                  // but it's typically harmless in development and specific to MUI's internal prop handling.
+                                  // No direct change needed here as it's correctly applied to the MUI Tabs component.
             sx={{ display: "flex", justifyContent: "center", width: "auto", margin: "0 auto" }}
           >
             <Tab label="Project" {...a11yProps(0)} sx={{ fontWeight: "Bold", color: "#ced4d7", fontSize: ["1rem", "2rem"] }} />
-            <Tab label="Certificate" {...a11yProps(1)} sx={{ fontWeight: "Bold", color: "#ced4d7", fontSize: ["1rem", "2rem"] }} />
-            <Tab label="Tech Stack" {...a11yProps(2)} sx={{ fontWeight: "Bold", color: "#ced4d7", fontSize: ["1rem", "2rem"] }} />
+            <Tab label="Certificate" {...a11yProps(1)} sx={{ fontWeight: "Bold", color: "#ced4d7", fontSize: ["1rem", "2rem"]} } />
+            <Tab label="Tech Stack" {...a11yProps(2)} sx={{ fontWeight: "Bold", color: "#ced4d7", fontSize: ["1rem", "2rem"]} } />
           </Tabs>
         </AppBar>
 

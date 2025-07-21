@@ -31,7 +31,7 @@ const ContactForm = () => {
 
 				{/* Open Graph Meta Tags */}
 				<meta property="og:type" content="website" />
-				<meta property="og:url" content="https://ymcoding.com/contact" />
+				<meta property="og:url" content="https://www.ymcoding.bio/contact" />
 				<meta property="og:title" content="Contact Younas Munawar | Full Stack Developer" />
 				<meta
 					property="og:description"

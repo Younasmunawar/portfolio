@@ -72,7 +72,7 @@ const Services = () => {
 
         {/* Open Graph for Facebook / LinkedIn */}
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ymcoding.com/services" />
+        <meta property="og:url" content="https://www.ymcoding.bio/services" />
         <meta property="og:title" content="Services | Younas Munawar" />
         <meta
           property="og:description"

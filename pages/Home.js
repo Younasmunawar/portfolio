@@ -43,7 +43,7 @@ const Home = () => {
 <meta name="google-site-verification" content="o9o3e4iGax5noeCj6bJjFH3Ky8yNjbVM0ZfPOkLkVJU" />
         {/* Open Graph Meta Tags */}
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ymcoding.com/" />
+        <meta property="og:url" content="https://www.ymcoding.bio/" />
         <meta
           property="og:title"
           content="Younas Munawar | Full Stack Developer & SEO Expert"
