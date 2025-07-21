@@ -26,7 +26,7 @@ const Education = () => {
 
         {/* Open Graph */}
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ymcoding.com/education" />
+        <meta property="og:url" content="https://www.ymcoding.bio/education" />
         <meta
           property="og:title"
           content="Education | Younas Munawar - Web Developer & Student"

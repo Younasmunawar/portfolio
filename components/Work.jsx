@@ -27,7 +27,7 @@ const Work = () => {
 
         {/* Open Graph (for Facebook & LinkedIn) */}
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ymcoding.com/#work" />
+        <meta property="og:url" content="https://www.ymcoding.bio/#work" />
         <meta property="og:title" content="Younas Munawar | Professional Work Timeline" />
         <meta
           property="og:description"
